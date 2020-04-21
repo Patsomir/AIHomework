@@ -9,6 +9,12 @@ public class Health : MonoBehaviour {
 	private Animator animator;
 	public GameObject cross;
 
+	public int HP
+	{
+		get { return health; }
+		private set { health = value; }
+	}
+
 	void Start() {
 		animator = GetComponent<Animator>();
 	}
