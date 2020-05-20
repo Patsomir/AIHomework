@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class HealthBarUI : MonoBehaviour
 {
     [SerializeField]
-    private Health health;
+    private Health health = null;
 
     private int maxHealth;
     private int actualBlueHealth;

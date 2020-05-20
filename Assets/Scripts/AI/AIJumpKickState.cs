@@ -16,6 +16,7 @@ public class AIJumpKickState : StateMachineBehaviour {
 		movementController = animator.GetComponent<MovementController>();
 		movementController.SetHorizontalMoveDirection(kickDirection);
 		movementController.OnJumpEnded += ResetAnimationState;
+		animator.GetComponent<MonkEvents>().OnJumpKick?.Invoke();
 	}
 
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
